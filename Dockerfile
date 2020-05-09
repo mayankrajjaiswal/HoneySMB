@@ -1,5 +1,9 @@
-FROM ubuntu
+FROM ubuntu:14.04
 MAINTAINER Rohit Sehgal (rsehgal@iitk.ac.in)
+
+RUN apt-get -y update
+RUN apt-get -y install software-properties-common
+RUN apt-add-repository universe
 
 RUN apt-get update -y && apt-get install python2.7 -y
 RUN apt-get update
@@ -7,6 +11,7 @@ RUN apt-get install python tcpdump python-pip -y
 RUN apt-get install aptitude -y
 
 RUN mkdir -p /home/smb
+RUN mkdir -p /home/smb/logs
 
 COPY libs /home/smb/libs
 COPY credentials_file /home/smb/credentials_file
