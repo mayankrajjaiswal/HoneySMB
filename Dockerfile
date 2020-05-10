@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Rohit Sehgal (rsehgal@iitk.ac.in)
+MAINTAINER Mayank Raj Jaiswal (MayankRajJaiswal@gmail.com)
 
 RUN apt-get -y update
 RUN apt-get -y install software-properties-common
